@@ -3,26 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Producers</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>The Producers - Charity Competition</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <h1>Welcome to The Producers</h1>
+        <div class="banner">
+            <h1>The Producers</h1>
+            <p>Making a Difference Together</p>
+            <a href="#support" class="btn large-btn">Support Us</a>
+        </div>
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="support.html">Support Us</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#mission">Our Mission</a></li>
+                <li><a href="#support">Support Us</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
-    <main>
-        <h2>About Us</h2>
-        <p>The Producers is a team dedicated to raising money for WOHAA which goes to children in India and Malawi who need a free education. Join us in making a difference!</p>
-    </main>
+
+    <section id="about" class="about">
+        <h2>About The Producers</h2>
+        <p>We are a passionate team competing in a charity event to make a real difference. Our goal is to raise awareness and funds for [Insert Charity Name]. Meet our amazing team:</p>
+        <div class="team-members">
+            <div class="member">
+                <img src="team-member1.jpg" alt="Member 1">
+                <h3>Member 1</h3>
+                <p>Role in the team</p>
+            </div>
+            <div class="member">
+                <img src="team-member2.jpg" alt="Member 2">
+                <h3>Member 2</h3>
+                <p>Role in the team</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="mission" class="mission">
+        <h2>Our Mission</h2>
+        <p>Our mission is to [describe the cause you're supporting] by participating in [name of the charity competition].</p>
+    </section>
+
+    <section id="support" class="support">
+        <h2>Support Us</h2>
+        <p>Help us reach our goal! You can support us by donating, spreading the word, or getting involved.</p>
+        <a href="#" class="btn">Donate Now</a>
+        <a href="#" class="btn secondary-btn">Learn More</a>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <p>If you have any questions or want to learn more, feel free to reach out to us at <a href="mailto:team@producers.com">team@producers.com</a>.</p>
+    </section>
+
     <footer>
-        <p>&copy; 2024 The Producers</p>
+        <p>&copy; 2024 The Producers. All Rights Reserved.</p>
     </footer>
+
+    <script>
+        // Smooth scrolling for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
 </html>
