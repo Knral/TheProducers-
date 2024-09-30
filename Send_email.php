@@ -5,7 +5,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $message = htmlspecialchars($_POST['message']);
 
     // Email settings
-    $to = 'kumarz@stpaulsschool.org.uk'; // Replace with your email address
+    $to = 'kayenmr@gmail.com'; // Replace with your email address
     $subject = 'New Contact Message from ' . $name;
     $body = "Name: $name\nEmail: $email\nMessage:\n$message";
     $headers = "From: $email";
