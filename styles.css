@@ -1,65 +1,207 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f4f4f4;
-  color: #333;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    background-color: #f0f4f8;
+    color: #333;
+    overflow-x: hidden;
 }
 
 header {
-  background: #007BFF;
-  color: white;
-  padding: 10px 0;
-  text-align: center;
+    background-color: #1f1f1f;
+    color: white;
+    position: relative;
+    padding: 1em 0;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+}
+
+.banner {
+    background: linear-gradient(135deg, #6e45e2, #88d3ce);
+    padding: 120px 0;
+    text-align: center;
+    color: white;
+    border-bottom-left-radius: 50% 20px;
+    border-bottom-right-radius: 50% 20px;
+    position: relative;
+}
+
+.banner h1 {
+    font-size: 4.5rem;
+    margin-bottom: 10px;
+    animation: fadeIn 1s ease;
+}
+
+.banner p {
+    font-size: 1.6rem;
+    margin-bottom: 30px;
+    animation: fadeIn 1.5s ease;
+}
+
+.btn.large-btn {
+    padding: 15px 40px;
+    font-size: 1.2rem;
+    margin-top: 30px;
+    background-color: #444;
 }
 
 nav ul {
-  list-style-type: none;
-  padding: 0;
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+    margin-top: 10px;
 }
 
 nav ul li {
-  display: inline;
-  margin: 0 15px;
+    display: inline-block;
+    margin: 0 20px;
 }
 
-nav a {
-  color: white;
-  text-decoration: none;
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
 }
 
-h1, h2 {
-  margin: 20px 0;
+nav ul li a:hover {
+    color: #88d3ce;
 }
 
-main {
-  padding: 20px;
-  background: white;
-  border-radius: 5px;
-  margin: 20px auto;
-  max-width: 600px;
+section {
+    padding: 80px 10%;
+    text-align: center;
 }
 
-.social-links {
-  margin: 20px 0;
+section h2 {
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+    position: relative;
+    display: inline-block;
+    font-weight: 600;
 }
 
-.button {
-  display: inline-block;
-  margin: 5px;
-  padding: 10px 15px;
-  background: #28A745;
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
+section h2::after {
+    content: '';
+    width: 80px;
+    height: 4px;
+    background-color: #88d3ce;
+    display: block;
+    margin: 10px auto;
+}
+
+.about p, .mission p, .support p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    color: #555;
+}
+
+.team-members {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.team-members .member {
+    background-color: white;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    margin: 15px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-members .member:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+.team-members img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    object-fit: cover;
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #6e45e2;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 10px;
+}
+
+.btn:hover {
+    background-color: #88d3ce;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.secondary-btn {
+    background-color: #88d3ce;
 }
 
 footer {
-  text-align: center;
-  padding: 10px 0;
-  background: #007BFF;
-  color: white;
-  position: relative;
-  bottom: 0;
-  width: 100%;
+    background-color: #1f1f1f;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 50px;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: border 0.3s ease;
+}
+
+form input:focus, form textarea:focus {
+    border-color: #6e45e2;
+    outline: none;
+}
+
+form button {
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    background-color: #6e45e2;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #88d3ce;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
